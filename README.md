@@ -11,5 +11,5 @@ $ git clone
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/1x6XsQF.gif)
+![](https://i.imgur.com/7UfnQIH.gif)
 > 如爬蟲類模樣的城堡
