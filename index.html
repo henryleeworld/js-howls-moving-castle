@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="霍爾的移動城堡" />
+    <meta property="og:description" content="由火魔卡西法驅動，有四支細腳，會噴出蒸氣。城堡的大門轉盤上有四種顏色，可經由轉動指針而通往四個不同的地方。" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/howls-moving-castle.css">
+    <title>霍爾的移動城堡</title>
+</head>
+<body>
+    <div class="sky"></div>
+    <div class="ground-main">
+    </div>
+    <div class="container">
+        <div class="poster"></div>
+        <div class="bobble-head-top">
+            <img src="images/bobble-head-top.png" class="bobble-head-top animate-bobble-head-top" onmouseover="this.src='images/bobble-head-top-hover.png';" onmouseout="this.src='images/bobble-head-top.png';" />
+        </div>
+        <div class="pirate-deck">
+            <img src="images/pirate-deck.png" class="pirate-deck animate-pirate-deck">
+        </div>
+        <div class="single-house">
+            <img src="images/single-house.png" class="single-house animate-single-house">
+        </div>
+        <div class="double-houses">
+            <img src="images/double-houses2.png" class="double-houses animate-double-houses">
+        </div>
+        <div class="goggly-eyes-block">
+            <img src="images/middle-face.png" class="goggly-eyes-block animate-goggly-eyes-block" onmouseover="this.src='images/middle-face-hover.png';" onmouseout="this.src='images/middle-face.png';" />
+        </div>
+        <div class="chim1-2">
+            <img src="images/c-1-2.png" class="chim1-2 animate-chim1-2">
+        </div>
+        <div class="chimney3">
+            <img src="images/chimney3.png" class="chimney3 animate-chimney3">
+        </div>
+        <div class="chimney4-house">
+            <img src="images/chimney4-house.png" class="chimney4-house animate-chimney4-house">
+        </div>
+        <div class="medieval-tower">
+            <img src="images/medieval-tower.png" class="medieval-tower animate-medieval-tower" onmouseover="this.src='images/medieval-tower-hover.png';" onmouseout="this.src='images/medieval-tower.png';" />
+        </div>
+        <div class="fin">
+            <img src="images/fin.png" class="fin animate-fin">
+        </div>
+        <div class="middle-pipes">
+            <img src="images/middle-pipes2.png" class="middle-pipes animate-middle-pipes">
+        </div>
+        <div class="cannon-one">
+            <img src="images/cannon-one.png" class="cannon-one animate-cannon-one">
+        </div>
+        <div class="cannon-two">
+            <img src="images/cannon-two.png" class="cannon-two animate-cannon-two">
+        </div>
+        <div class="cannon-bg"></div>
+        <div class="bobble-head-main">
+            <img src="images/bobble-head-main.png" class="bobble-head-main animate-bobble-head-main" onmouseover="this.src='images/bobble-head-main-hover.png';" onmouseout="this.src='images/bobble-head-main.png';" />
+        </div>
+        <div class="jaw">
+            <img src="images/jaw.png" class="jaw animate-jaw">
+        </div>
+        <div class="shield-one">
+            <img src="images/shield-one.png" class="shield-one animate-shield-one">
+        </div>
+        <div class="shield-two">
+            <img src="images/shield-two.png" class="shield-two animate-shield-two">
+        </div>
+    </div>
+    <audio id="music" preload="true">
+        <source src="audio/castle.mp3" type="audio/mpeg">
+    </audio>
+    <div id="audioplayer">
+        <button id="pButton" class="play"></button>
+        <div id="timeline">
+            <div id="playhead"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="js/howls-moving-castle.js" defer></script>
+</body>
+</html>

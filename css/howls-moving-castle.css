@@ -1,0 +1,1383 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: helvetica, sans-serif;
+    color: #ff0800;
+    font-size: 8px;
+    line-height: 11px;
+    text-align: center;
+}
+
+a {
+    font-family: helvetica, sans-serif;
+    color: #ff0800;
+    font-size: 8px;
+    line-height: 11px;
+    text-transform: uppercase;
+}
+
+.container {
+    z-index: 5;
+    position: relative;
+    width: 510px;
+    height: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.poster {
+    position: absolute;
+    z-index: -1;
+    width: 500px;
+    height: 900px;
+    background-image: url('../images/howlsmovingcastle-base.jpg');
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.poster:hover {
+    background-image: url('../images/lines-bg.png');
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.sky {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 498px;
+    background-color: #ffb892;
+}
+
+.ground-main {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #42392b;
+    background-image: url('../images/rocks-bg.jpg');
+}
+
+.ground-BG image {
+    width: 285px;
+    height: 375px;
+    background-repeat: repeat;
+}
+
+#audioplayer {
+    z-index: 10;
+    position: absolute;
+    top: 465px;
+    width: 35px;
+    height: 35px;
+    background-color: none;
+    opacity: 0.4;
+}
+
+#pButton {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    outline: none;
+}
+
+.play {
+    background: url('../images/play.png');
+}
+
+.pause {
+    background: url('../images/pause.png');
+}
+
+#timeline {
+    width: 400px;
+    height: 20px;
+    margin-top: 20px;
+    float: left;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, .3);
+    visibility: hidden;
+}
+
+#playhead {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: 1px;
+    background: rgba(0, 0, 0, 1);
+    visibility: hidden;
+}
+
+audio:hover {
+    opacity: 0.8;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+controls {
+    background-color: #ffb890;
+    color: #ffb890;
+}
+
+.pirate-deck {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    right: 77px;
+    top: 25px;
+}
+
+img.pirate-deck {
+    width: 125px;
+    height: 113px;
+}
+
+.animate-pirate-deck {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 20% 100% 0;
+    transform-origin: 20% 100% 0;
+    -webkit-animation-name: animate-pirate-deck;
+    animation-name: animate-pirate-deck;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: cubic-bezier(.6, .35, .19, .85);
+    animation-timing-function: cubic-bezier(.6, .35, .19, .85);
+}
+
+@-webkit-keyframes animate-pirate-deck {
+    0% {
+        -webkit-transform: translatY(0) translateX(0) rotate(0deg);
+        transform: translatY(0) translateX(0) rotate(0deg);
+    }
+    15% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(-10deg);
+        transform: translateY(0px) translateX(0px) rotate(-10deg);
+    }
+    30% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(10deg);
+        transform: translateY(0px) translateX(0px) rotate(10deg);
+    }
+    50% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(-10deg);
+        transform: translateY(0px) translateX(0px) rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(10deg);
+        transform: translateY(0px) translateX(0px) rotate(10deg);
+    }
+    100% {
+        -webkit-transform: translateY(0px) translate(0px) rotate(0deg);
+        transform: translateY(0px) translate(0px) rotate(0deg);
+    }
+}
+
+@keyframes animate-pirate-deck {
+    0% {
+        -webkit-transform: translatY(0) translateX(0) rotate(0deg);
+        transform: translatY(0) translateX(0) rotate(0deg);
+    }
+    15% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(-10deg);
+        transform: translateY(0px) translateX(0px) rotate(-10deg);
+    }
+    30% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(10deg);
+        transform: translateY(0px) translateX(0px) rotate(10deg);
+    }
+    50% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(-10deg);
+        transform: translateY(0px) translateX(0px) rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: translateY(0px) translateX(0px) rotate(10deg);
+        transform: translateY(0px) translateX(0px) rotate(10deg);
+    }
+    100% {
+        -webkit-transform: translateY(0px) translate(0px) rotate(0deg);
+        transform: translateY(0px) translate(0px) rotate(0deg);
+    }
+}
+
+.single-house {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: auto;
+    right: 84px;
+    top: 72px;
+}
+
+img.single-house {
+    width: 71px;
+    height: 70px;
+}
+
+.animate-single-house {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-animation-name: animate-single-house;
+    animation-name: animate-single-house;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.6, .35, .19, .85);
+    animation-timing-function: cubic-bezier(.6, .35, .19, .85);
+}
+
+@-webkit-keyframes animate-single-house {
+    0% {
+        -webkit-transform: translatY(0);
+        transform: translatY(0);
+    }
+    20% {
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+    }
+    65% {
+        -webkit-transform: translateY(12px);
+        transform: translateY(12px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animate-single-house {
+    0% {
+        -webkit-transform: translatY(0);
+        transform: translatY(0);
+    }
+    20% {
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+    }
+    65% {
+        -webkit-transform: translateY(12px);
+        transform: translateY(12px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+.double-houses {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+    right: 126px;
+    top: 42px;
+}
+
+img.double-houses {
+    width: 75px;
+    height: 96px;
+}
+
+.animate-double-houses {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-animation-name: animate-double-houses;
+    animation-name: animate-double-houses;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-double-houses {
+    0% {
+        -webkit-transform: translateY(7px);
+        transform: translateY(7px);
+    }
+    50% {
+        -webkit-transform: translateY(-13px) translateX(-8px);
+        transform: translateY(-13px) translateX(-8px);
+    }
+    70% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    100% {
+        -webkit-transform: translateY(7px);
+        transform: translateY(7px);
+    }
+}
+
+@keyframes animate-double-houses {
+    0% {
+        -webkit-transform: translateY(7px);
+        transform: translateY(7px);
+    }
+    50% {
+        -webkit-transform: translateY(-13px) translateX(-8px);
+        transform: translateY(-13px) translateX(-8px);
+    }
+    70% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    100% {
+        -webkit-transform: translateY(7px);
+        transform: translateY(7px);
+    }
+}
+
+.cannon-one {
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    left: 33px;
+    top: 174px;
+}
+
+img.cannon-one {
+    width: 62px;
+    height: 46px;
+}
+
+.animate-cannon-one {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation-name: animate-cannon-one;
+    animation-name: animate-cannon-one;
+    -webkit-animation-delay: none;
+    animation-delay: none;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-cannon-one {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(9px, 11px);
+        transform: translate(9px, 11px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-cannon-one {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(9px, 11px);
+        transform: translate(9px, 11px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+.cannon-two {
+    position: absolute;
+    z-index: 40;
+    width: 100%;
+    height: auto;
+    left: 18px;
+    top: 212px;
+}
+
+img.cannon-two {
+    width: 81px;
+    height: 40px;
+}
+
+.cannon-bg {
+    position: absolute;
+    z-index: 45;
+    width: 47px;
+    height: 41px;
+    left: 112px;
+    top: 418px;
+}
+
+.animate-cannon-two {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation-name: animate-cannon-two;
+    animation-name: animate-cannon-two;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-cannon-two {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translateX(12px) translateY(4px);
+        transform: translateX(12px) translateY(4px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-cannon-two {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translateX(12px) translateY(4px);
+        transform: translateX(12px) translateY(4px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+.shield-one {
+    position: absolute;
+    z-index: 30;
+    width: auto;
+    height: auto;
+    left: 112px;
+    top: 195px;
+}
+
+img.shield-one {
+    width: 75px;
+    height: 80px;
+}
+
+.animate-shield-one {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation-name: animate-shield-one;
+    animation-name: animate-shield-one;
+    -webkit-animation-delay: none;
+    animation-delay: none;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-shield-one {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(3px, 3px);
+        transform: translate(3px, 3px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-shield-one {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(3px, 3px);
+        transform: translate(3px, 3px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+.shield-two {
+    position: absolute;
+    z-index: 25;
+    width: auto;
+    height: auto;
+    left: 140px;
+    top: 219px;
+}
+
+img.shield-two {
+    width: 47px;
+    height: 33px;
+}
+
+.animate-shield-two {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation-name: animate-shield-two;
+    animation-name: animate-shield-two;
+    -webkit-animation-delay: none;
+    animation-delay: none;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-shield-two {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(-2px, -1px);
+        transform: translate(-2px, -1px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-shield-two {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(-2px, -1px);
+        transform: translate(-2px, -1px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+.bobble-head-top {
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    top: 44px;
+    left: 43px;
+}
+
+img.bobble-head-top {
+    width: 166px;
+    height: 157px;
+}
+
+.animate-bobble-head-top {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-animation-name: animate-bobble-head-top;
+    animation-name: animate-bobble-head-top;
+    -webkit-animation-duration: 9s;
+    animation-duration: 9s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animate-bobble-head-top {
+    0% {
+        -webkit-transform: rotate(-17deg);
+        transform: rotate(-17deg);
+    }
+    35% {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg);
+    }
+    50% {
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+    }
+    65% {
+        -webkit-transform: rotate(13deg);
+        transform: rotate(13deg);
+    }
+    100% {
+        -webkit-transform: rotate(-17deg);
+        transform: rotate(-17deg);
+    }
+}
+
+@keyframes animate-bobble-head-top {
+    0% {
+        -webkit-transform: rotate(-17deg);
+        transform: rotate(-17deg);
+    }
+    35% {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg);
+    }
+    50% {
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+    }
+    65% {
+        -webkit-transform: rotate(13deg);
+        transform: rotate(13deg);
+    }
+    100% {
+        -webkit-transform: rotate(-17deg);
+        transform: rotate(-17deg);
+    }
+}
+
+.goggly-eyes-block {
+    position: absolute;
+    z-index: 40;
+    height: auto;
+    right: 91px;
+    top: 79px;
+}
+
+img.googly-eyes-block {
+    width: 144px;
+    height: 258px;
+}
+
+img.googly-eyes-block:hover {
+    width: 144px;
+    height: 258px;
+    background-color: white;
+}
+
+.animate-goggly-eyes-block {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-animation-name: animate-goggly-eyes-block;
+    animation-name: animate-goggly-eyes-block;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.6, .35, .19, .85);
+    animation-timing-function: cubic-bezier(.6, .35, .19, .85);
+}
+
+@-webkit-keyframes animate-goggly-eyes-block {
+    0% {
+        -webkit-transform: translatY(0) translateX(0);
+        transform: translatY(0) translateX(0);
+    }
+    20% {
+        -webkit-transform: translateY(-11px) translateX(0px);
+        transform: translateY(-11px) translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateY(0px) translate(0px);
+        transform: translateY(0px) translate(0px);
+    }
+}
+
+@keyframes animate-goggly-eyes-block {
+    0% {
+        -webkit-transform: translatY(0) translateX(0);
+        transform: translatY(0) translateX(0);
+    }
+    20% {
+        -webkit-transform: translateY(-11px) translateX(0px);
+        transform: translateY(-11px) translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateY(0px) translate(0px);
+        transform: translateY(0px) translate(0px);
+    }
+}
+
+.medieval-tower {
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    right: 41px;
+    top: 128px;
+}
+
+img.medieval-tower {
+    width: 98px;
+    height: 184px;
+}
+
+.animate-medieval-tower {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-animation-name: animate-medieval-tower;
+    animation-name: animate-medieval-tower;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-delay: none;
+    animation-delay: none;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes animate-medieval-tower {
+    0% {
+        -webkit-transform: translate(0px, -2px);
+        transform: translate(0px, -2px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 9px);
+        transform: translate(1px, 9px);
+    }
+    100% {
+        -webkit-transform: translate(0px, -2px);
+        transform: translate(0px, -2px);
+    }
+}
+
+@keyframes animate-medieval-tower {
+    0% {
+        -webkit-transform: translate(0px, -2px);
+        transform: translate(0px, -2px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 9px);
+        transform: translate(1px, 9px);
+    }
+    100% {
+        -webkit-transform: translate(0px, -2px);
+        transform: translate(0px, -2px);
+    }
+}
+
+.jaw {
+    position: absolute;
+    z-index: 45;
+    width: auto;
+    height: auto;
+    left: 41px;
+    top: 212px;
+}
+
+img.jaw {
+    width: 87px;
+    height: 95px;
+}
+
+.animate-jaw {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-name: animate-jaw;
+    animation-name: animate-jaw;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-delay: none;
+    animation-delay: none;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes animate-jaw {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(14deg);
+        transform: rotate(14deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animate-jaw {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(14deg);
+        transform: rotate(14deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+.chim1-2 {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    right: 13px;
+    top: 81px;
+}
+
+img.chim1-2 {
+    width: 117px;
+    height: 132px;
+}
+
+.chimney3 {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+    right: 36px;
+    top: 65px;
+}
+
+img.chimney3 {
+    width: 91px;
+    height: 145px;
+}
+
+.chimney4-house {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    right: 54px;
+    top: 73px;
+}
+
+img.chimney4-house {
+    width: 70px;
+    height: 126px;
+}
+
+.animate-chim1-2 {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 20% 100% 0;
+    transform-origin: 20% 100% 0;
+    -webkit-animation-name: animate-chim1-2;
+    animation-name: animate-chim1-2;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-chim1-2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    15% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    60% {
+        -webkit-transform: rotate(-52deg);
+        transform: rotate(-52deg);
+    }
+    73% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animate-chim1-2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    15% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    60% {
+        -webkit-transform: rotate(-52deg);
+        transform: rotate(-52deg);
+    }
+    73% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+.animate-chimney3 {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 20% 100%;
+    transform-origin: 20% 100%;
+    -webkit-animation-name: animate-chimney3;
+    animation-name: animate-chimney3;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-chimney3 {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    15% {
+        -webkit-transform: translate(0px, 0px) rotate(-10deg);
+        transform: translate(0px, 0px) rotate(-10deg);
+    }
+    30% {
+        -webkit-transform: translate(0px, 0px) rotate(10deg);
+        transform: translate(0px, 0px) rotate(10deg);
+    }
+    45% {
+        -webkit-transform: translate(0px, 0px) rotate(-10deg);
+        transform: translate(0px, 0px) rotate(-10deg);
+    }
+    60% {
+        -webkit-transform: translate(0px, 0px) rotate(10deg);
+        transform: translate(0px, 0px) rotate(10deg);
+    }
+    75% {
+        -webkit-transform: translate(0px, 0px) rotate(-10deg);
+        transform: translate(0px, 0px) rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes animate-chimney3 {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    15% {
+        -webkit-transform: translate(0px, 0px) rotate(-10deg);
+        transform: translate(0px, 0px) rotate(-10deg);
+    }
+    30% {
+        -webkit-transform: translate(0px, 0px) rotate(10deg);
+        transform: translate(0px, 0px) rotate(10deg);
+    }
+    45% {
+        -webkit-transform: translate(0px, 0px) rotate(-10deg);
+        transform: translate(0px, 0px) rotate(-10deg);
+    }
+    60% {
+        -webkit-transform: translate(0px, 0px) rotate(10deg);
+        transform: translate(0px, 0px) rotate(10deg);
+    }
+    75% {
+        -webkit-transform: translate(0px, 0px) rotate(-10deg);
+        transform: translate(0px, 0px) rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+.animate-chimney4-house {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 20% 100%;
+    transform-origin: 20% 100%;
+    -webkit-animation-name: animate-chimney4-house;
+    animation-name: animate-chimney4-house;
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-chimney4-house {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-chimney4-house {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+.fin {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    right: 41px;
+    top: 180px;
+}
+
+img.fin {
+    width: 76px;
+    height: 117px;
+}
+
+.animate-fin {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation-name: animate-fin;
+    animation-name: animate-fin;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    /*        animation-timing-function: ease-in-out;*/
+}
+
+@-webkit-keyframes animate-fin {
+    0% {
+        -webkit-transform: translateX(-1px);
+        transform: translateX(-1px);
+    }
+    50% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+    100% {
+        -webkit-transform: translateX(-1px);
+        transform: translateX(-1px);
+    }
+}
+
+@keyframes animate-fin {
+    0% {
+        -webkit-transform: translateX(-1px);
+        transform: translateX(-1px);
+    }
+    50% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+    100% {
+        -webkit-transform: translateX(-1px);
+        transform: translateX(-1px);
+    }
+}
+
+.middle-pipes {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    right: 79px;
+    top: 105px;
+}
+
+img.middle-pipes {
+    width: 68px;
+    height: 222px;
+}
+
+
+/* Animation for middle pipes */
+
+.animate-middle-pipes {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation-name: animate-middle-pipes;
+    animation-name: animate-middle-pipes;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-middle-pipes {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 7px);
+        transform: translate(1px, 7px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-middle-pipes {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 7px);
+        transform: translate(1px, 7px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/* Bobble head and main mouth section */
+
+.bobble-head-main {
+    position: absolute;
+    z-index: 35;
+    width: 100%;
+    height: auto;
+    left: 34px;
+    top: 63px;
+}
+
+img.bobble-head-main {
+    width: 180px;
+    height: 331px;
+}
+
+
+/* Animation for bobble head and main mouth section */
+
+.animate-bobble-head-main {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation-name: animate-bobble-head-main;
+    animation-name: animate-bobble-head-main;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+    animation-timing-function: cubic-bezier(.16, -0.11, .54, .99);
+}
+
+@-webkit-keyframes animate-bobble-head-main {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 7px);
+        transform: translate(1px, 7px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animate-bobble-head-main {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 7px);
+        transform: translate(1px, 7px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/* Common Classes */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/* Media Quaries */
+
+@media screen and (min-width: 200px) and (max-width: 767px) and (orientation: portrait) {
+    html {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 30%;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .ground-main {
+        display: none;
+    }
+    .ground-BG {
+        display: none;
+    }
+    audio {
+        display: none;
+    }
+    @-ms-viewport {
+        width: device-width;
+    }
+    @-o-viewport {
+        width: device-width;
+    }
+    @viewport {
+        width: device-width;
+    }
+}
